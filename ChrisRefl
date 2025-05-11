@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LEVEL UP: Christopher Estrada's Learning Reflection</title>
+  <style>
+    body {
+      font-family: 'Courier New', monospace;
+      background-color: #0d0d0d;
+      color: #00ffff;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2em;
+      color: #ffd700;
+      text-shadow: 0 0 10px #ffd700;
+    }
+    .level {
+      background-color: #1e1e1e;
+      border: 2px solid #00ffff;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 30px auto;
+      max-width: 700px;
+      box-shadow: 0 0 15px #00ffff;
+    }
+    .level h2 {
+      color: #ff00ff;
+      text-shadow: 0 0 5px #ff00ff;
+    }
+    .level p {
+      color: #f0f0f0;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .btn {
+      display: inline-block;
+      background-color: #00ffff;
+      color: #000;
+      padding: 10px 20px;
+      margin-top: 10px;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+    .btn:hover {
+      background-color: #00cccc;
+    }
+      @keyframes fadeInLevel {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes bounceXP {
+      0% { transform: scale(1); opacity: 0.6; }
+      50% { transform: scale(1.2); opacity: 1; }
+      100% { transform: scale(1); }
+    }
+
+    .fade-in {
+      animation: fadeInLevel 0.6s ease-out;
+    }
+
+    .xp-pop {
+      animation: bounceXP 0.8s ease-out;
+    }
+
+    .btn-glow {
+      animation: pulseBtn 2s infinite;
+    }
+
+    @keyframes pulseBtn {
+      0% { box-shadow: 0 0 5px #00ffff; }
+      50% { box-shadow: 0 0 15px #00ffff; }
+      100% { box-shadow: 0 0 5px #00ffff; }
+    }
+
+    
+</style>
+</head>
+<body>
+  <div id="startScreen" style="position:fixed; top:0; left:0; width:100%; height:100%; background:#000; color:#00ffff; display:flex; align-items:center; justify-content:center; flex-direction:column; z-index:1000;">
+    <h2 style="font-size: 28px;">🚀 Welcome to the Mission</h2>
+    <p>Press Start to begin your entrepreneurship journey</p>
+    <button class="btn" onclick="startGame()">START</button>
+  </div>
+  <h1>🎮 LEVEL UP: Christopher Estrada's Learning Reflection</h1>
+
+  <div class="level" id="level0" style="display:none;">
+    <h2>📘 Level 1 What Does “Entrepreneur” Really Mean?</h2>
+    <p>I used to think an entrepreneur was just someone who starts a business. But this class taught me that it’s really about solving problems and finding value in opportunities, even with limited resources. It’s more about action and impact than just profit. Entrepreneurs can be in business, education, or nonprofits. They show up wherever change is needed.</p>
+  </div>
+
+  <div class="level" id="level1" style="display:none;">
+    <h2>🧠 Level 2 The Entrepreneur’s Mindset</h2>
+    <p>An entrepreneurial mindset means being curious, independent, willing to take risks, and able to bounce back from failure. I realized it’s not about always being confident, but about being okay with uncertainty and still moving forward.</p>
+  </div>
+
+  <div class="level" id="level$1" style="display:none;">
+    <h2>🛠️ Level 3 Learning from Failure</h2>
+    <p>This class helped me see failure as a learning tool. Entrepreneurs use failure to reflect, challenge old habits, and come up with better strategies. It’s not just a setback, it’s a chance to grow smarter.</p>
+  </div>
+
+  <div class="level" id="level3" style="display:none;">
+    <h2>🧩 Level 4 Coping with Failure</h2>
+    <p>Failure hits hard sometimes, especially mentally. But I learned that support systems, mentors, and reflection can help entrepreneurs recover and move forward. Coping is part of building resilience.</p>
+  </div>
+
+  <div class="level" id="level4" style="display:none;">
+    <h2>📈 Level 5 Entrepreneurs and the Economy</h2>
+    <p>Entrepreneurs create jobs, drive innovation, and bring in new ideas that make the economy grow. They’re a big reason why industries evolve and stay competitive. I didn’t realize how big their impact was until now.</p>
+  </div>
+
+  <div class="level" id="level5" style="display:none;">
+    <h2>🌍 Level 6 Social Entrepreneurs</h2>
+    <p>Not every entrepreneur is focused on profit. Social entrepreneurs care more about solving real world problems, like improving education or reducing poverty. They use creativity to make a difference, even when they don’t have a lot of resources.</p>
+  </div>
+
+  <div class="level" id="level6" style="display:none;">
+    <h2>💡 Level 7 Where Ideas Come From</h2>
+    <p>Entrepreneurs don’t wait around for million dollar ideas. They pay attention to problems they see and think about how to fix them. I learned that ideas come from being observant, curious, and ready to take action.</p>
+  </div>
+
+  <div class="level" id="level7" style="display:none;">
+    <h2>📚 Level 8 Lifelong Learning</h2>
+    <p>Entrepreneurs are always learning from books, people, experiences, even competitors. That inspired me to stop thinking of school as the only place to learn. I want to keep using this after this class so i can become more sucesful.</p>
+  </div>
+
+  <div class="level" id="level8" style="display:none;">
+    <h2>🔁 Level 9 Reflection Helps Growth</h2>
+    <p>After this course, I understand that reflecting on what you’ve done helps you avoid mistakes and improve faster. Entrepreneurs use reflection to build better habits, manage teams smarter, and make clearer decisions.</p>
+  </div>
+
+  <div class="level" id="level9" style="display:none;">
+    <h2>🌟 Level 10 Success Isn’t the End</h2>
+    <p>Even successful entrepreneurs keep learning. They don’t let success make them stop growing. They stay humble, listen to feedback, and keep improving their business and themselves. I want to carry that mindset with me after this class.</p>
+  </div>
+<div class="level" id="boss" style="display:none;" style="display:none; background:#1e1e1e; border:3px solid red; border-radius:10px; box-shadow:0 0 15px red; padding:20px; margin:30px auto; max-width:700px;">
+  <h2 style="color:#ff4d4d;">👹 Boss Battle: Final Reflection</h2>
+  <p>You’ve reached the final challenge. Answer these final questions to defeat the Boss of Doubt and prove your growth!</p>
+</div>
+<div class="level" id="quiz" style="display:none;" style="display:none; background:#222; padding:20px; border:2px solid #ffd700; border-radius:10px; max-width:700px; margin:30px auto;">
+    <h2 style="color:#ffd700;">🧠 Final Quiz</h2>
+    <p>What is a key trait of an entrepreneurial mindset?</p>
+    <button class="btn" onclick="answerQuiz(this, true)">Willing to take risks</button>
+    <button class="btn" onclick="answerQuiz(this, false)">Avoids uncertainty</button>
+    <p>What helps entrepreneurs grow after failure?</p>
+    <button class="btn" onclick="answerQuiz(this, true)">Reflection</button>
+    <button class="btn" onclick="answerQuiz(this, false)">Blaming others</button>
+    <div id="quizResult"></div>
+    <button class="btn" onclick="showCongratsScreen()">Finish</button>
+  </div>
+  <div id="congratsScreen" style="display:none; text-align:center; padding:40px;">
+    <h2 style="color:#00ffcc; font-size:2em;">🏆 Congratulations!</h2>
+    <p>You’ve completed all levels and defeated the Boss of Doubt!</p>
+    <button class="btn" onclick="window.location.reload()">🔁 Play Again</button>
+  </div>
+    
+  </div>
+
+  <script>
+    const levels = document.querySelectorAll('.level');
+    function startGame() {
+      document.getElementById('startScreen').style.display = 'none';
+      levels[0].style.display = 'block';
+    }
+
+    for (let i = 0; i < levels.length - 2; i++) {
+      const btn = document.createElement('button');
+      btn.className = 'btn btn-glow';
+      btn.innerText = 'Next';
+      btn.onclick = () => {
+        levels[i].style.display = 'none';
+        levels[i + 1].style.display = 'block';
+        levels[i + 1].classList.add('fade-in');
+        showXPMessage(i + 1);
+        if (i + 1 === 9) setTimeout(() => {
+  document.getElementById('boss').style.display = 'block';
+  setTimeout(() => document.getElementById('quiz').style.display = 'block', 2000);
+}, 1000);
+      };
+      levels[i].appendChild(btn);
+    }
+
+    let score = 0;
+    function answerQuiz(btn, isCorrect) {
+      if (isCorrect) {
+        btn.style.backgroundColor = '#0f0';
+        score++;
+      } else {
+        btn.style.backgroundColor = '#f00';
+        const msg = document.createElement('p');
+        msg.innerText = '❌ Try again! That’s not correct.';
+        msg.className = 'feedback-msg';
+        msg.style.color = '#ff4444';
+        btn.parentNode.insertBefore(msg, btn.nextSibling);
+      }
+      btn.disabled = true;
+      const total = document.querySelectorAll('#quiz button').length / 2;
+      if (score >= total) {
+        document.getElementById('quizResult').innerHTML = '<p style="color:#0f0">🎉 You passed the quiz and completed the quest!</p>';
+        document.getElementById('playAgain').style.display = 'block';
+      }
+    }
+  function showXPMessage(levelNum) {
+      const xpMsg = document.createElement('div');
+      xpMsg.style.background = '#111';
+      xpMsg.style.color = '#0f0';
+      xpMsg.style.padding = '10px';
+      xpMsg.style.marginTop = '10px';
+      xpMsg.style.border = '2px dashed #0f0';
+      xpMsg.style.borderRadius = '5px';
+      xpMsg.style.fontWeight = 'bold';
+      const messages = [
+        '🧠 XP Gained! You unlocked Entrepreneur Basics!',
+        '🧠 XP Gained! Mindset Level Unlocked!',
+        '🛠️ XP Gained! Learned from Failure!',
+        '🧩 XP Gained! Resilience Boost Achieved!',
+        '📈 XP Gained! Economic Impact Understood!',
+        '🌍 XP Gained! Social Awareness Activated!',
+        '💡 XP Gained! Idea Engine Running!',
+        '📚 XP Gained! Lifelong Learning On!',
+        '🔁 XP Gained! Reflection Powers Boosted!',
+        '🌟 XP Gained! Growth Mindset Mastered!'
+      ];
+      xpMsg.innerText = messages[levelNum] || '🎉 XP Gained!';
+      xpMsg.classList.add('xp-pop');
+      levels[levelNum].appendChild(xpMsg);
+    }
+    function showCongratsScreen() {
+    document.getElementById('quiz').style.display = 'none';
+    document.getElementById('congratsScreen').style.display = 'block';
+  }
+</script>
+<div id="miniGame" style="position:fixed; top:100px; right:20px; background:#111; color:#0f0; border:2px solid #0f0; border-radius:10px; padding:15px; z-index:999; max-width:200px;">
+  <h3 style="margin-top:0;">🎯 Side Quest</h3>
+  <p>Earn XP by clicking:</p>
+  <button class="btn" onclick="earnXP()">Tap to Earn XP</button>
+  <p id="xpTotal">XP: 0</p>
+</div>
+<script>
+let xp = 0;
+function earnXP() {
+  xp++;
+  document.getElementById('xpTotal').innerText = `XP: ${xp}`;
+}
+</script>
+<div id="funFacts" style="position:fixed; top:100px; left:20px; background:#111; color:#ffd700; border:2px solid #ffd700; border-radius:10px; padding:15px; z-index:999; max-width:220px;">
+  <h3 style="margin-top:0;">💡 Fun Fact</h3>
+  <p id="factBox">Did you know? The word 'entrepreneur' comes from a French word meaning 'to undertake'.</p>
+</div>
+<script>
+  const facts = [
+    "The word 'entrepreneur' comes from French meaning 'to undertake'.",
+    "Elon Musk started SpaceX with nearly all his personal savings.",
+    "Most entrepreneurs fail at least once before succeeding.",
+    "Social entrepreneurs focus more on impact than profit.",
+    "Many entrepreneurs say failure taught them more than success."
+  ];
+  setInterval(() => {
+    const box = document.getElementById('factBox');
+    const index = Math.floor(Math.random() * facts.length);
+    box.innerText = `Did you know? ${facts[index]}`;
+  }, 8000);
+</script>
+<div id="sideDecor" style="position:fixed; bottom:20px; left:50%; transform:translateX(-50%); background:#222; border:2px dashed #0ff; color:#fff; padding:10px 20px; border-radius:10px; font-size:14px; box-shadow:0 0 10px #00ffff;">
+  🌟 Tip: Entrepreneurs are just problem solvers in action. Keep solving!
+</div>
+</body>
+</html>
